@@ -20,7 +20,7 @@ The concept used behind the methodoly is as follows:
 
 **Note** - The dictionary created above uses the **images_variant_train.txt** and **images_family_train.txt** files to map variants to families. 
 
-I have used transfer learning and Inception net for training the neural network. The validation accuracy achieved is 93% using WS-DAN method.
+I have used transfer learning and Inception net for training the neural network. The validation accuracy achieved is **93% using WS-DAN method.**
 
 We can improve the performance by increasing the number of epochs and the batch size. The batch size used was 12 on Titan Xp GPU but we can increase the batch size which will further improve the overall performance of the model.
 
