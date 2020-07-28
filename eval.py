@@ -39,8 +39,7 @@ def generate_heatmap(attention_maps):
     return torch.stack(heat_attention_maps, dim=1)
 
 
-def main():
-    result_arr = []
+def main(result_arr):
     logging.basicConfig(
         format='%(asctime)s: %(levelname)s: [%(filename)s:%(lineno)d]: %(message)s',
         level=logging.INFO)
@@ -147,4 +146,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    result_arr = []
+    main(result_arr)
+    print(result_arr)
