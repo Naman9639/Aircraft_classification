@@ -4,7 +4,7 @@ count = 0
 txt_file = open("images_val.txt", "r")
 lines = txt_file.read().split('\n')
 
-path = '/home/naman/Downloads/Retail Pulse ML Assignment Data/val/'
+path = 'ENTER PATH TO THE TRAIN AND VAL FOLDERS'
 for i in sorted(os.listdir(path)):
     files = os.listdir(path + str(i))
     files = sorted(files)
@@ -19,9 +19,10 @@ for i in sorted(os.listdir(path)):
         os.rename(path + str(i) + '/' + img, ''.join([path, str(i) + '/', extra, extension]))
 
 
+path1 = 'ENTER PATH TO THE IMAGES'
 for i in sorted(os.listdir(path)):
     files = os.listdir(path + str(i))
     # print(i)
     files = os.listdir(path + str(i))
     for f in files:
-        shutil.move(path + i + '/' + f, path)
+        shutil.move(path + i + '/' + f, path1)
