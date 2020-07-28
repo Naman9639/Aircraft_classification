@@ -2,13 +2,17 @@
 
 The dataset should be downloaded and kept in the following structure for the code to run properly. Use the rename_move.py file to rename all the images and move the images into the desired destination.
 
--data/
-    └─── images
-              └─── 0034309.jpg
-              └─── 0034958.jpg
-              └─── ...
-            └─── variants.txt
-            └─── images_variant_trainval.txt
+```
+  -/FGVC-Aircraft/data/
+                  └─── images
+                          └─── 0034309.jpg
+                          └─── 0034958.jpg
+                          └─── ...
+                  └─── variants.txt
+                  └─── images_variant_trainval.txt
+                  └─── images_variant_test.txt
+```
+                 
 
 The concept used behind the methodoly is as follows:
 - We first train the model using images_variant_train.txt and variants.txt file. We use CNN to classify the images of the aircrafts into varients. Once the varient for a particular image is recieved we can directly map it to it's family.
