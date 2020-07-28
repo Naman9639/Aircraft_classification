@@ -35,11 +35,11 @@ class AircraftDataset(Dataset):
                 variants_dict[line.strip()] = idx
         self.num_classes = len(variants_dict)
 
-#        if phase == 'train':
-        list_path = os.path.join(DATAPATH, 'images_variant_trainval.txt')
+        if phase == 'train':
+            list_path = os.path.join(DATAPATH, 'images_variant_trainval.txt')
 
-#        else:
-#            list_path = os.path.join(DATAPATH, 'images_variant_test.txt')
+        else:
+            list_path = os.path.join(DATAPATH, 'images_variant_test.txt')
 
         self.images = []
         self.labels = []
