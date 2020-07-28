@@ -20,7 +20,8 @@ The concept used behind the methodoly is as follows:
 
 **Note** - The dictionary created above uses the **images_variant_train.txt** and **images_family_train.txt** files to map variants to families. 
 
-I have used transfer learning and Inception net for training the neural network. The validation accuracy achieved is **93% using WS-DAN method.**
+I have used transfer learning and Inception net for training the neural network. The validation accuracy achieved is **93% using WS-DAN method.** 
+WS-DAN also knows as Weakly Supervised Data Augmentation Network (WS-DAN) explores the potential of data augmentation. Specifically, for each training image, a  attention map is generated to represent the object’s discriminative parts by weakly supervised learning. Next, the image is augmented guided by these attention maps, including attention cropping and attention dropping. WS-DAN improves the classification accuracy in two folds. In the first stage, images can be seen better since more discriminative parts’ features will be extracted. In the second stage, attention regions provide accurate location of object, which ensures our model to look at the object closer and further improve the performance. 
 
 We can improve the performance by increasing the number of epochs and the batch size. The batch size used was 12 on Titan Xp GPU but we can increase the batch size which will further improve the overall performance of the model.
 
